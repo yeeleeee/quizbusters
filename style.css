@@ -11,7 +11,17 @@ body{
     padding: 3em;
 }
 nav{
-    font-weight: 700;
+    font-weight: 300;
+}
+
+
+li{
+    position: relative;
+    display: inline-block;
+}
+
+li:last-of-type {
+    float: right;
 }
 
 .title{
@@ -19,6 +29,28 @@ nav{
     text-align: center;
     font-size: 3rem;
     line-height: 1.6em;
-    padding: 2rem;
+    padding: 2rem;   
+}
+
+
+
+
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: orangered;
+    transition: 0.3s ease;
+}
+
+
+/*media queries*/
+@media screen and (max-width: 550px) {
+    
+    html {
+        font-size: 13px;
+    }
+    
+    
     
 }
