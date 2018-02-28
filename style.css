@@ -1,7 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,700|Sacramento');
+
+
 html{
-    
+   background-color: #ffe819; 
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
 }
 
 body{
-    font-family: sans-serif;
+    padding: 3em;
+}
+nav{
+    font-weight: 700;
+}
+
+.title{
+    font-family: 'Sacramento', cursive;
+    text-align: center;
+    font-size: 3rem;
+    line-height: 1.6em;
+    padding: 2rem;
+    
 }
