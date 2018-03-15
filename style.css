@@ -34,8 +34,6 @@ li:last-of-type {
 }
 
 
-
-
 a{
     text-decoration: none;
 }
@@ -43,6 +41,51 @@ a:hover{
     color: orangered;
     transition: 0.3s ease;
 }
+
+
+/*********************slides******************/
+.slide{
+    display: block;
+    width: 60vw;
+/*    height: 30vw;*/
+    padding: 2em;
+    margin: 5em;
+    background: white;
+}
+.slide>*{
+    line-height: 2em;
+    margin-bottom: 2em;
+}
+hint{
+    font-size: .8em;
+    color: gray
+}
+h3{
+    font-weight: 700;
+}
+form{
+}
+
+
+
+button{
+    display: inline-block;
+    margin-right: 1em;
+    padding: 1em;
+    border: blue .1em solid;
+    color: blue;
+    padding: .5em;
+    text-align: center;
+    cursor: pointer;
+    font-family: "Railway";
+    font-size: 1.3em;
+}
+button:hover{
+    box-shadow: 5px 5px gray;
+}
+
+
+
 
 
 /*media queries*/
