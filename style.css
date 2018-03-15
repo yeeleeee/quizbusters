@@ -56,7 +56,7 @@ a:hover{
     line-height: 2em;
     margin-bottom: 2em;
 }
-hint{
+.hint{
     font-size: .8em;
     color: gray
 }
