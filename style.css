@@ -42,16 +42,20 @@ a:hover{
     transition: 0.3s ease;
 }
 
+img{
+    width: 40%;
+}
+
 
 /*********************slides******************/
 .slide{
     position: absolute;
     top: 30%;
-    left: 17vw;
+    left: 12vw;
     display: block;
-    width: 60vw;
-    height: 50vw;
-    padding: 2em;
+    width: 70vw;
+    height: 40vw;
+    padding: 3vw;
     margin-bottom: 5em;
     background: white;
 }
@@ -82,18 +86,24 @@ a:hover{
     margin-bottom: 2em;
 }
 .hint{
-    font-size: .8em;
-    color: gray
+    color: gray;
+    margin-bottom: .5em;
 }
 h3{
     font-weight: 700;
 }
 form{
 }
+.red{
+    color: red;
+    line-height: 1.3em;
+    text-indent: 38px;
+}
 
 
-button{
+#last,input,button{
     display: inline-block;
+    margin-top: 1em;
     margin-right: 1em;
     padding: 1em;
     border: blue .1em solid;
@@ -101,16 +111,52 @@ button{
     padding: .5em;
     text-align: center;
     cursor: pointer;
-    font-family: "Railway";
+    font-family: 'Railway';
     font-size: 1.3em;
 }
-button:hover{
+.btn:hover,button:hover{
     box-shadow: 5px 5px gray;
 }
 
+#last:hover{
+    box-shadow: none;
+    color: white;
+    background: blue;
+}
+
+#last{
+    margin: 0;
+}
 
 
 
+/*media queries*/
+@media screen and (max-width: 1125px) {
+    
+    html {
+/*        font-size: 13px;*/
+    }
+    
+    .slide{
+        height: 80vw;
+    }
+    
+    img{
+        width: 80%;
+        margin: 7vw;
+    }
+    
+    .slide>*{
+        margin-bottom: 0;
+    }
+    
+    #last,input,button{
+    font-size: .9rem;
+    margin-top: 1em;
+    margin-bottom: 0;
+    }
+    
+}
 
 /*media queries*/
 @media screen and (max-width: 550px) {
@@ -119,6 +165,21 @@ button:hover{
         font-size: 13px;
     }
     
+    .slide{
+        height: 110vw;
+    }
+    .red{
+    text-indent: 0;
+    }
     
+    .slide>*{
+        margin-bottom: 1em;
+    }
     
+    #last,input,button{
+    display: block;
+    margin-top: .5em;
+    margin-bottom: 0;
+    }
+     
 }
