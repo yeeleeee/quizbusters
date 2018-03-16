@@ -45,13 +45,38 @@ a:hover{
 
 /*********************slides******************/
 .slide{
+    position: absolute;
+    top: 30%;
+    left: 17vw;
     display: block;
     width: 60vw;
-/*    height: 30vw;*/
+    height: 50vw;
     padding: 2em;
-    margin: 5em;
+    margin-bottom: 5em;
     background: white;
 }
+/****slide z index*****/
+
+#player{
+    z-index: 10;
+}
+.a-1{
+    z-index:1;
+}
+.a-2{
+    z-index:2;
+}
+.a-3{
+    z-index:3;
+}
+.a-4{
+    z-index:4;
+}
+.a-5{
+    z-index:5;
+}
+
+
 .slide>*{
     line-height: 2em;
     margin-bottom: 2em;
@@ -65,7 +90,6 @@ h3{
 }
 form{
 }
-
 
 
 button{
