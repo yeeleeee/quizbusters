@@ -86,7 +86,7 @@ function checkStartQuiz(event) {
 function cleanTime() {
   return Math.round(player.getCurrentTime());
 }
-
+//Done
 function startQuiz() {
   player.pauseVideo();
   quizState = QUIZ_STATES[1];
@@ -98,19 +98,76 @@ function startQuiz() {
     if (quizAns === '2') {
       quizState = QUIZ_STATES[2];
       handleCorrect();
+      $('.a-1').hide();
     } else if (quizAns === '1') {
       quizState = QUIZ_STATES[3];
+      handleIncorrect1();
+      $('.a-1').hide();
     } else if (quizAns === '3') {
       quizState = QUIZ_STATES[4];
+      handleIncorrect2();
+      $('.a-1').hide();
     } else if (quizAns === '4') {
       quizState = QUIZ_STATES[5];
+      handleIncorrect3();
+      $('.a-1').hide();
     } else if (!quizAns) {
       $('.a-1 #unfilled').show();
     }
   });
+
+  $(document).on('click', '#askHint1', () => {
+    quizState = QUIZ_STATES[6];
+    handleHint1();
+    $('.a-1').hide();
+  });
+}
+// TODO
+function handleHint1() {
+  $('.a-2').show();
+  $(document).on('click', '#askHint2', () => {
+    quizState = QUIZ_STATES[7];
+    handleHint2();
+    $('.a-2').hide();
+  });
+  //return to quiz w other button
+  $(document).on('click', '#returnToQuestion', () => {
+    startQuiz();
+    $('.a-2').hide();
+  });
+}
+
+// TODO
+function handleHint2() {
+  $('.a-4').show();
+  $(document).on('click', '#askHint2', () => {
+    quizState = QUIZ_STATES[8];
+    handleHint3();
+    $('.a-4').hide();
+  });
+  //return to quiz w other button
+  $(document).on('click', '#returnToQuestion', () => {
+    startQuiz();
+    $('.a-4').hide();
+  });
+}
+
+function handleHint3() {
+  $('.a-5').show;
+  $(document).on('click', '#returnToQuestion', () => {
+    startQuiz();
+    $('.a-5').hide();
+  });
 }
 
 function handleCorrect() {}
+
+function handleIncorrect1() {}
+
+function handleIncorrect2() {}
+
+function handleIncorrect3() {}
+
 /* Jquery wizard of oz below */
 /*
 QUIZ_STATES = [
