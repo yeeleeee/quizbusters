@@ -84,7 +84,8 @@ img {
 }
 .a-5{
     z-index:50;
-=======
+}
+
 #player {
   position: absolute;
   z-index: 0;
@@ -97,22 +98,7 @@ img {
   margin-bottom: 5em;
   background: white;
 }
-.a-1 {
-  z-index: 1;
-}
-.a-2 {
-  z-index: 2;
-}
-.a-3 {
-  z-index: 3;
-}
-.a-4 {
-  z-index: 4;
-}
-.a-5 {
-  z-index: 5;
->>>>>>> 0b29b1083a01f9a63ff1f8b0358559f9929cf299
-}
+
 
 .slide > * {
   line-height: 2em;
