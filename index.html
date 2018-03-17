@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="https://images.vexels.com/media/users/3/130767/isolated/preview/03a0085e97ef237b9fd1999ffd2e5182-halloween-ghost-cartoon-3-by-vexels.png
     " />
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 </head>
 <body>
     <nav>
@@ -18,19 +19,23 @@
 
     <div class="workspace">
        <div class="title">Quizbusters...!</div>
-        <div class="slide" id="player"></div>
+        <div id="player"></div>
 <!-------------------slides!----------------------->
         <div class="slide a-1">
             <h3>Quiz! Why does the pan need to be above 120 celcius?</h3>
             <form>
-                <input type="radio" name="quiz" value="1">1. Because cooking releases water from the food, and we want the water to leave the pan quickly.<br>
-                <input type="radio" name="quiz" value="2">2. Because the water molecule keeps the food hot for a while.<br>
+
+                <input type="radio" name="quiz" value="1">1. Because the water molecule keeps the food hot for a while.<br>
+                <input type="radio" name="quiz" value="2">2. Because cooking releases water from the food, and we want the water to leave the pan quickly.<br>
                 <input type="radio" name="quiz" value="3">3. Because otherwise the pan won't conduct heat.<br>
                 <input type="radio" name="quiz" value="4">4. Because the stove gets damaged otherwise.<br>
-                <input class="btn"type="submit" value="submit">
+                <div>
+                  <button id="ansSubmit" type="button">Submit</button>
+                  <p id="unfilled" class="red">select an answer to submit</p>
+                </div>
                 <button type="button">I have no idea</button>
             </form>
-        </div>        
+        </div>
         <div class="slide a-2">
             <div class="hint">Quiz: Why does the pan need to be above 120 celcius?</div>
             <h3>Hint: remember. food has water.</h3>
@@ -64,7 +69,7 @@
                 <p class="red">Yay you got it! At 100C it starts evaporating.</p>
                 <input type="radio" name="hint2" value="4">4. I have no idea.
                 <p class="red">Well good you're here! At 100C water starts evaporating. </p>
-                
+
                 <button type="button">I am ready for the question</button>
                 <button type="button">I need more hint</button>
             </form>
@@ -76,9 +81,9 @@
             <button type="button">I am ready for the question</button>
             <button id="last" type="button">This is the last hint.</button>
         </div>
-        
-        
+
+
     </div>
 </body>
-  <script src="./index.js"></script>
+  <script src="./videoQuiz.js"></script>
 </html>
