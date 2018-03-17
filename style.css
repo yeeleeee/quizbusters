@@ -1,66 +1,63 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,700|Sacramento');
 
-
-html{
-   background-color: #ffe819; 
-    font-size: 16px;
-    font-family: 'Raleway', sans-serif;
+html {
+  background-color: #ffe819;
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
 }
 
-body{
-    padding: 3em;
+body {
+  padding: 3em;
 }
-nav{
-    font-weight: 300;
+nav {
+  font-weight: 300;
 }
 
-
-li{
-    position: relative;
-    display: inline-block;
-    text-decoration: none;
+li {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
 }
 
 li:last-of-type {
-    float: right;
+  float: right;
 }
 
-.title{
-    font-family: 'Sacramento', cursive;
-    text-align: center;
-    font-size: 3rem;
-    line-height: 1.6em;
-    padding: 2rem;   
+.title {
+  font-family: 'Sacramento', cursive;
+  text-align: center;
+  font-size: 3rem;
+  line-height: 1.6em;
+  padding: 2rem;
 }
 
-
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
-a:hover{
-    color: orangered;
-    transition: 0.3s ease;
-}
-
-img{
-    width: 40%;
+a:hover {
+  color: orangered;
+  transition: 0.3s ease;
 }
 
+img {
+  width: 40%;
+}
 
 /*********************slides******************/
-.slide{
-    position: absolute;
-    top: 30%;
-    left: 12vw;
-    display: block;
-    width: 70vw;
-    height: 40vw;
-    padding: 3vw;
-    margin-bottom: 5em;
-    background: white;
+.slide {
+  position: absolute;
+  top: 30%;
+  left: 12vw;
+  display: block;
+  width: 70vw;
+  height: 40vw;
+  padding: 3vw;
+  margin-bottom: 5em;
+  background: white;
 }
 /****slide z index*****/
 
+<<<<<<< HEAD
 #player{
     z-index: 100;
 }
@@ -87,108 +84,135 @@ img{
 }
 .a-5{
     z-index:50;
+=======
+#player {
+  position: absolute;
+  z-index: 0;
+  top: 30%;
+  left: 12vw;
+  display: block;
+  width: 70vw;
+  height: 40vw;
+  padding: 3vw;
+  margin-bottom: 5em;
+  background: white;
+}
+.a-1 {
+  z-index: 1;
+}
+.a-2 {
+  z-index: 2;
+}
+.a-3 {
+  z-index: 3;
+}
+.a-4 {
+  z-index: 4;
+}
+.a-5 {
+  z-index: 5;
+>>>>>>> 0b29b1083a01f9a63ff1f8b0358559f9929cf299
 }
 
-
-.slide>*{
-    line-height: 2em;
-    margin-bottom: 2em;
+.slide > * {
+  line-height: 2em;
+  margin-bottom: 2em;
 }
-.hint{
-    color: gray;
-    margin-bottom: .5em;
+.hint {
+  color: gray;
+  margin-bottom: 0.5em;
 }
-h3{
-    font-weight: 700;
+h3 {
+  font-weight: 700;
 }
-form{
+form {
 }
-.red{
-    color: red;
-    line-height: 1.3em;
-    text-indent: 38px;
-}
-
-
-#last,input,button{
-    display: inline-block;
-    margin-top: 1em;
-    margin-right: 1em;
-    padding: 1em;
-    border: blue .1em solid;
-    color: blue;
-    padding: .5em;
-    text-align: center;
-    cursor: pointer;
-    font-family: 'Railway';
-    font-size: 1.3em;
-}
-.btn:hover,button:hover{
-    box-shadow: 5px 5px gray;
+.red {
+  color: red;
+  line-height: 1.3em;
+  text-indent: 38px;
 }
 
-#last:hover{
-    box-shadow: none;
-    color: white;
-    background: blue;
+#last,
+input,
+button {
+  display: inline-block;
+  margin-top: 1em;
+  margin-right: 1em;
+  padding: 1em;
+  border: blue 0.1em solid;
+  color: blue;
+  padding: 0.5em;
+  text-align: center;
+  cursor: pointer;
+  font-family: 'Railway';
+  font-size: 1.3em;
+}
+.btn:hover,
+button:hover {
+  box-shadow: 5px 5px gray;
 }
 
-#last{
-    margin: 0;
+#last:hover {
+  box-shadow: none;
+  color: white;
+  background: blue;
 }
 
-
+#last {
+  margin: 0;
+}
 
 /*media queries*/
 @media screen and (max-width: 1125px) {
-    
-    html {
-/*        font-size: 13px;*/
-    }
-    
-    .slide{
-        height: 80vw;
-    }
-    
-    img{
-        width: 80%;
-        margin: 7vw;
-    }
-    
-    .slide>*{
-        margin-bottom: 0;
-    }
-    
-    #last,input,button{
-    font-size: .9rem;
+  html {
+    /*        font-size: 13px;*/
+  }
+
+  .slide {
+    height: 80vw;
+  }
+
+  img {
+    width: 80%;
+    margin: 7vw;
+  }
+
+  .slide > * {
+    margin-bottom: 0;
+  }
+
+  #last,
+  input,
+  button {
+    font-size: 0.9rem;
     margin-top: 1em;
     margin-bottom: 0;
-    }
-    
+  }
 }
 
 /*media queries*/
 @media screen and (max-width: 550px) {
-    
-    html {
-        font-size: 13px;
-    }
-    
-    .slide{
-        height: 110vw;
-    }
-    .red{
+  html {
+    font-size: 13px;
+  }
+
+  .slide {
+    height: 110vw;
+  }
+  .red {
     text-indent: 0;
-    }
-    
-    .slide>*{
-        margin-bottom: 1em;
-    }
-    
-    #last,input,button{
+  }
+
+  .slide > * {
+    margin-bottom: 1em;
+  }
+
+  #last,
+  input,
+  button {
     display: block;
-    margin-top: .5em;
+    margin-top: 0.5em;
     margin-bottom: 0;
-    }
-     
+  }
 }
