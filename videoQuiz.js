@@ -106,7 +106,7 @@ function startQuiz() {
       $('#qCorrect').show();
       $('#contWatch').show();
       $(document).on('click', '#contWatch', () => {
-        $('.slide').hide();
+        $('.a-1').hide();
         player.playVideo();
       });
     } else if (quizAns === '1') {
@@ -187,10 +187,15 @@ function handleHint2() {
 }
 
 function handleHint3() {
-  $('.a-5').show;
+  console.log('last hint!');
+  $('.a-5').show();
   $(document).on('click', '#returnToQuestion', () => {
     startQuiz();
     $('.a-5').hide();
+  });
+  $(document).on('click', '#last', () => {
+    $('.a-5').hide();
+    player.playVideo();
   });
 }
 
