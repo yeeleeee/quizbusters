@@ -86,7 +86,24 @@ function checkStartQuiz(event) {
 function cleanTime() {
   return Math.round(player.getCurrentTime());
 }
-//Done
+/* Jquery wizard of oz-ing below */
+
+/*
+QUIZ_STATES = [
+  0- 'unstarted',
+  1- 'started',
+  2- 'correct',
+  3- 'incorrect1',
+  4- 'incorrect2',
+  5- 'incorrect3',
+  6- 'hint1',
+  7- 'hint2',
+  8- 'hint3',
+  9- 'doneSolved',
+  10- 'doneUnsolved'
+]
+*/
+
 function startQuiz() {
   player.pauseVideo();
   quizState = QUIZ_STATES[1];
@@ -136,7 +153,6 @@ function startQuiz() {
   });
 }
 
-// TODO
 function handleHint1() {
   $('.a-2').show();
   $(document).on('click', '#askHint2', () => {
@@ -151,7 +167,6 @@ function handleHint1() {
   });
 }
 
-// TODO
 function handleHint2() {
   $('.a-3').show();
   $('.a-3 #unfilled').hide();
@@ -199,60 +214,7 @@ function handleHint3() {
   });
 }
 
-/* Jquery wizard of oz below */
-/*
-QUIZ_STATES = [
-  0- 'unstarted',
-  1- 'started',
-  2- 'correct',
-  3- 'incorrect1',
-  4- 'incorrect2',
-  5- 'incorrect3',
-  6- 'hint1',
-  7- 'hint2',
-  8- 'hint3',
-  9- 'doneSolved',
-  10- 'doneUnsolved'
-]
-*/
 $(document).ready(() => {
   //hide divs
   $('.slide').hide();
-
-  switch (quizState) {
-    case QUIZ_STATES[0]: // 'unstarted'
-      break;
-
-    case QUIZ_STATES[1]: // 'started'
-      break;
-
-    case QUIZ_STATES[2]: // 'correct' (ans 2)
-      break;
-
-    case QUIZ_STATES[3]: // 'incorrect1' - FoodHot (ans 1)
-      break;
-
-    case QUIZ_STATES[4]: // 'incorrect2' - doesn't Conduct (ans 3)
-      break;
-
-    case QUIZ_STATES[5]: // 'incorrect3' - damaged stove (ans 4)
-      break;
-
-    case QUIZ_STATES[6]: // 'hint1'
-      break;
-
-    case QUIZ_STATES[7]: // 'hint2'
-      break;
-    case QUIZ_STATES[8]: // 'hint3'
-      break;
-
-    case QUIZ_STATES[9]: //doneSolved
-      break;
-
-    case QUIZ_STATES[10]: //doneUnsolved
-      break;
-
-    default:
-      throw 'undefined quiz state!';
-  }
 });
