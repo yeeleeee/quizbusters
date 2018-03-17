@@ -1,4 +1,4 @@
-const START_QUIZ_TIME = 193; //seconds
+const START_QUIZ_TIME = 140; //seconds
 const JUMP_TO_TIME_WHEN_CORRECT = 200; // seconds
 
 const QUIZ_STATES = [
@@ -92,25 +92,38 @@ function startQuiz() {
   quizState = QUIZ_STATES[1];
   $('.a-1').show();
   $('.a-1 #unfilled').hide();
+  $('#qError1').hide();
+  $('#qError2').hide();
+  $('#qError3').hide();
+  $('#qCorrect').hide();
+  $('#contWatch').hide();
+
   $(document).on('click', '#ansSubmit', () => {
     console.log('clicked!');
     var quizAns = $('input[name=quiz]:checked').val();
     if (quizAns === '2') {
       quizState = QUIZ_STATES[2];
-      handleCorrect();
-      $('.a-1').hide();
+      $('#qCorrect').show();
+      $('#contWatch').show();
+      $(document).on('click', '#contWatch', () => {
+        $('.slide').hide();
+        player.playVideo();
+      });
     } else if (quizAns === '1') {
       quizState = QUIZ_STATES[3];
-      handleIncorrect1();
-      $('.a-1').hide();
+      $('#ansSubmit').text('Submit Again');
+      $('#askHint1').text('Give me a hint!');
+      $('#qError1').show();
     } else if (quizAns === '3') {
       quizState = QUIZ_STATES[4];
-      handleIncorrect2();
-      $('.a-1').hide();
+      $('#ansSubmit').text('Submit Again');
+      $('#askHint1').text('Give me a hint!');
+      $('#qError2').show();
     } else if (quizAns === '4') {
       quizState = QUIZ_STATES[5];
-      handleIncorrect3();
-      $('.a-1').hide();
+      $('#ansSubmit').text('Submit Again');
+      $('#askHint1').text('Give me a hint!');
+      $('#qError3').show();
     } else if (!quizAns) {
       $('.a-1 #unfilled').show();
     }
@@ -122,6 +135,7 @@ function startQuiz() {
     $('.a-1').hide();
   });
 }
+
 // TODO
 function handleHint1() {
   $('.a-2').show();
@@ -162,11 +176,19 @@ function handleHint3() {
 
 function handleCorrect() {}
 
-function handleIncorrect1() {}
+function handleIncorrect1() {
+  $('#ansSubmit').text('Submit Again');
+  $('#askHint1').text('Give me a hint!');
+}
 
-function handleIncorrect2() {}
+function handleIncorrect2() {
+  $('#ansSubmit').text('Submit Again');
+  $('#askHint1').text('Give me a hint!');
+}
 
-function handleIncorrect3() {}
+function handleIncorrect3() {
+  $('#ansSubmit').text('Submit Again');
+}
 
 /* Jquery wizard of oz below */
 /*
