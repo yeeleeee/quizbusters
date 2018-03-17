@@ -53,84 +53,33 @@
                 <button id="askHint2" type="button">I need another hint</button>
             </form>
         </div>
+
         <div class="slide a-3">
             <div class="hint">Quiz: Why does the pan need to be above 120 celcius?</div>
             <h3>Hint: What happens to the water when the pan is above 100C?</h3>
             <form>
                 <input type="radio" name="hint2" value="1">1. It smells nicer.<br>
+                <p id="hError1"class="red">not really. Water smells the same. At 100C it starts evaporating.</p>
                 <input type="radio" name="hint2" value="2">2. It gets hotter.<br>
+                <p id="hError2"class="red">That's close! Something related happens too. At 100C it starts evaporating.</p>
                 <input type="radio" name="hint2" value="3">3. It starts evaporating.<br>
+                <p id="hCorrect"class="green">Yay you got it! At 100C it starts evaporating.</p>
                 <input type="radio" name="hint2" value="4">4. I have no idea.<br>
-                <input class="btn" type="submit" value="submit">
+                <p id="hError3">Good thing you're here! At 100C water starts evaporating.</p>
+                <div>
+                  <button id="hint2Submit" type="button">Submit</button>
+                  <p id="unfilled" class="red">select an answer to submit</p>
+                </div>
                 <button id="returnToQuestion" type="button">I am ready for the question</button>
                 <button id="askHint3" type="button">I need another hint</button>
             </form>
         </div>
-        <div class="slide a-4-1">
-            <div class="hint">Quiz: Why does the pan need to be above 120 celcius?</div>
-            <h3>Hint: What happens to the water when the pan is above 100C?</h3>
-            <form>
-                <input type="radio" name="hint2" value="1">1. It smells nicer.
-                <p class="red"> not really. Water smells the same. At 100C it starts evaporating.</p>
-                <input type="radio" name="hint2" value="2">2. It gets hotter.<br>
-                <input type="radio" name="hint2" value="3">3. It starts evaporating.<br>
-                <input type="radio" name="hint2" value="4">4. I have no idea.<br>
 
-                <button type="button">back</button>
-                <button type="button">I am ready for the question</button>
-                <button type="button">I need more hint</button>
-            </form>
-        </div>
-        <div class="slide a-4-2">
-            <div class="hint">Quiz: Why does the pan need to be above 120 celcius?</div>
-            <h3>Hint: What happens to the water when the pan is above 100C?</h3>
-            <form>
-                <input type="radio" name="hint2" value="1">1. It smells nicer.<br>
-                <input type="radio" name="hint2" value="2">2. It gets hotter.
-                <p class="red">That's close! Water smells the same. At 100C it starts evaporating.</p>
-                <input type="radio" name="hint2" value="3">3. It starts evaporating.<br>
-                <input type="radio" name="hint2" value="4">4. I have no idea.<br>
-
-                <button type="button">back</button>
-                <button type="button">I am ready for the question</button>
-                <button type="button">I need more hint</button>
-            </form>
-        </div>
-        <div class="slide a-4-3">
-            <div class="hint">Quiz: Why does the pan need to be above 120 celcius?</div>
-            <h3>Hint: What happens to the water when the pan is above 100C?</h3>
-            <form>
-                <input type="radio" name="hint2" value="1">1. It smells nicer.<br>
-                <input type="radio" name="hint2" value="2">2. It gets hotter.<br>
-                <input type="radio" name="hint2" value="3">3. It starts evaporating.
-                <p class="green">Yay you got it! At 100C it starts evaporating.</p>
-                <input type="radio" name="hint2" value="4">4. I have no idea.<br>
-
-
-                <button type="button">back</button>
-                <button type="button">I am ready for the question</button>
-                <button type="button">I need more hint</button>
-            </form>
-        </div>
-        <div class="slide a-4-4">
-            <div class="hint">Quiz: Why does the pan need to be above 120 celcius?</div>
-            <h3>Hint: What happens to the water when the pan is above 100C?</h3>
-            <form>
-                <input type="radio" name="hint2" value="1">1. It smells nicer.<br>
-                <input type="radio" name="hint2" value="2">2. It gets hotter.<br>
-                <input type="radio" name="hint2" value="3">3. It starts evaporating.<br>
-                <input type="radio" name="hint2" value="4">4. I have no idea.
-                <p class="red">Well good you're here! At 100C water starts evaporating. </p>
-
-                <button type="button">back</button>
-                <button type="button">I am ready for the question</button>
-                <button type="button">I need more hint</button>
-            </form>
-        </div>
         <div class="slide a-5">
             <div class="hint">Quiz: Why does the pan need to be above 120 celcius?</div>
             <h3>Hint: Here's the state change of water.</h3>
             <img src="statechange.jpg">
+            <h3>We dont want our food steaming in its own water</h3>
             <button id="returnToQuestion" type="button">I am ready for the question</button>
             <button id="last" type="button" disabled>This is the last hint.</button>
         </div>

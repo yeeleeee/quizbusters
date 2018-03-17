@@ -1,4 +1,4 @@
-const START_QUIZ_TIME = 140; //seconds
+const START_QUIZ_TIME = 141; //seconds
 const JUMP_TO_TIME_WHEN_CORRECT = 200; // seconds
 
 const QUIZ_STATES = [
@@ -153,16 +153,36 @@ function handleHint1() {
 
 // TODO
 function handleHint2() {
-  $('.a-4').show();
-  $(document).on('click', '#askHint2', () => {
+  $('.a-3').show();
+  $('.a-3 #unfilled').hide();
+  $('#hError1').hide();
+  $('#hError2').hide();
+  $('#hError3').hide();
+  $('#hCorrect').hide();
+  $(document).on('click', '#askHint3', () => {
     quizState = QUIZ_STATES[8];
     handleHint3();
-    $('.a-4').hide();
+    $('.a-3').hide();
   });
   //return to quiz w other button
   $(document).on('click', '#returnToQuestion', () => {
     startQuiz();
-    $('.a-4').hide();
+    $('.a-3').hide();
+  });
+  $(document).on('click', '#hint2Submit', () => {
+    var hintAns = $('input[name=hint2]:checked').val();
+    if (hintAns === '3') {
+      //correct
+      $('#hCorrect').show();
+    } else if (hintAns === '1') {
+      $('#hError1').show();
+    } else if (hintAns === '2') {
+      $('#hError2').show();
+    } else if (hintAns === '4') {
+      $('#hError3').show();
+    } else if (!hintAns) {
+      $('.a-3 #unfilled').show();
+    }
   });
 }
 
@@ -172,22 +192,6 @@ function handleHint3() {
     startQuiz();
     $('.a-5').hide();
   });
-}
-
-function handleCorrect() {}
-
-function handleIncorrect1() {
-  $('#ansSubmit').text('Submit Again');
-  $('#askHint1').text('Give me a hint!');
-}
-
-function handleIncorrect2() {
-  $('#ansSubmit').text('Submit Again');
-  $('#askHint1').text('Give me a hint!');
-}
-
-function handleIncorrect3() {
-  $('#ansSubmit').text('Submit Again');
 }
 
 /* Jquery wizard of oz below */
